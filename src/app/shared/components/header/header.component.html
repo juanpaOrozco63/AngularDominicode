@@ -1,6 +1,7 @@
 <mat-toolbar color="primary">
-    <span>Angular 12 & Angular Material </span>
-    {{ quantity$ | async | json }} - Quantity
-    {{ total$ | async | json }} - Total
-
+    <a [routerLink]="['/']">
+        <span>Angular 12 & Angular Material </span>
+    </a>
+    <span class="spacer"></span>
+    <app-cart class="mouseHover" (click)="gotToCheckout()"></app-cart>
 </mat-toolbar>
