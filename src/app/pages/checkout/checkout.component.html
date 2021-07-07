@@ -6,10 +6,10 @@
                 Name is required
             </mat-error>
         </mat-form-field>
-        <mat-radio-group class="form_element">
+        <mat-radio-group class="form_element" value=delivery>
             <p>Choose and option: </p>
+            <mat-radio-button value="delivery" (change)="onPickupOrDelivery(true)" checked>Delivery</mat-radio-button>
             <mat-radio-button value="pickup" (change)="onPickupOrDelivery(false)">Pickup</mat-radio-button>
-            <mat-radio-button value="delivery" (change)="onPickupOrDelivery(true)">Delivery</mat-radio-button>
         </mat-radio-group>
         <ng-container *ngIf="isDelivery ; else showStores">
             <mat-form-field class="form_element">

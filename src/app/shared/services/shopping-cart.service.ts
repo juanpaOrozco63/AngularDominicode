@@ -45,4 +45,10 @@ export class ShoppingCartService {
     let total = this.products.reduce((acc,prod)=> acc += (prod.price* prod.quantity),0);
     this.totalSubject.next(total);
   }
+  public resetCart():void{
+    this.cartSubject.next([]);
+    this.totalSubject.next(0);
+    this.quantitySubject.next(0);
+    this.products=[];
+  }
 }
